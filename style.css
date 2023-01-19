@@ -989,11 +989,6 @@ img {
 /* Секция why end */
 
 /* Секция form start */
-.submit-btn {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-}
 
 .form {
     padding: 60px 0;
@@ -1014,7 +1009,38 @@ img {
 .form__wrapper input {
     width: 100%;
     margin-bottom: 30px;
+    display: block;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 16px;
+    border: none;
+    min-height: 45px;
+    padding: 0 15px;
+    border: 1px solid var(--text-dark);
+    border-radius: 3px;
+    margin: 0;
 }
+
+.form__wrapper input::placeholder {
+    font-size: 16px;
+}
+
+input.submit-btn {
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--color-light-blue);
+    border: 1px solid var(--color-light-blue);
+    font-size: 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+input.submit-btn:hover {
+    color: var(--color-light-blue);
+    background-color: var(--color-white);
+}
+
 /* Секция form end */
 
 /* Секция training-reviews start */
