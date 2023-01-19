@@ -5,6 +5,11 @@
  // добавляет возможность выбрать кастомныи лого из админки
 add_theme_support( 'custom-logo');
 
+// добавляет возможность выбрать кастомныи лого из админки
+add_theme_support( 'custom-logo');
+
+// подключение и настройка меню через админку
+add_action('after_setup_theme', 'add_menu');
 
 
  function theme_add_scripts() {
@@ -47,5 +52,9 @@ add_theme_support( 'custom-logo');
     // подключаем основной script.js файл
     wp_enqueue_script( '', get_template_directory_uri() .
     '/assets/js/script.js', false, null, 'footer' );
+}
+
+function add_menu() {
+    register_nav_menu( 'top', 'главное меню сайта' );
 }
 ?>

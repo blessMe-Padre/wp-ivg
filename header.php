@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>
+    <?php
+			if(is_404()) {
+				echo 'Ошибка 404';
+			} else {
+				the_title();
+			}
+		?>
+    </title>
     <?php wp_head(); ?>
 </head>
 
@@ -19,7 +27,9 @@
                         <div class="logo">
                             <p class="logo__text">Практический психолог во&nbsp;Владивостоке</p>
                             <div class="logo__img">
-                                <img src="img/head-logo.jpg" alt="логотип">
+                                <a href="<?= home_url(); ?>">
+                                    <?php the_custom_logo(); ?>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -27,7 +37,7 @@
             </div>
             <div class="container">
                 <button class="btn nav-button" aria-label="Меню"></button>
-                <nav class="nav">
+                <!-- <nav class="nav">
                     <ul>
                         <li>
                             <a href="index.html">Главная</a>
@@ -67,6 +77,15 @@
                             <a href="contacts.html">контакты</a>
                         </li>
                     </ul>
+                </nav> -->
+                <nav class="nav">
+                <?php wp_nav_menu([
+					'theme_location' => 'top',
+					'container' => '',
+					'menu_class' => '',
+					'menu_id' => ''
+				]);
+				?>
                 </nav>
             </div>
         </header>
