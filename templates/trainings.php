@@ -7,50 +7,25 @@ Template Name: Тренинги
 <main>
     <section class="descriptions">
         <div class="container">
-            <h1>Тренинги</h1>
-            <p>Можем все знать, все понимать, но не уметь сделать.
-                То есть возможности есть у всех, способности у многих, непосредственно умение — мало у кого.
-                Тренинги для этого и предназначены, чтобы научиться делать то, что мы знаем или
-                научиться делать по-новому то, что мы делали неэффективно. То есть учимся новым навыкам
-                поведения.
-                Тренинги всегда интересны, всегда неожиданны, всегда приводят к открытию внутреннего потенциала,
-                всегда меняют жизнь к лучшему.</p>
-            <p>Тренинги рассчитаны на 2 дня, время проведения с 10.00 до 18.00, количество участников 10-15
-                человек.</p>
-            <p>В программе тренингов телесно ориентированные игры, упражнения, танцы с высвобождением
-                заблокированных сил, обсуждением результатов, осознанием перспектив.</p>
-
+            <h1><?php the_title(); ?></h1>
+            <?php the_content(); ?>
         </div>
     </section>
     <section class="gallery-block">
         <div class="container">
             <h2 class="visually-hidden">Галерея</h2>
             <ul class="gallery-block__list gallery">
+            <?php $loop = CFS()->get('training');
+                foreach ($loop as $row ) {
+            ?>
                 <li class="gallery-block__item">
-                    <a href="img/gallery-1.jpg">
-                        <img src="img/gallery-1.jpg" alt="фото">
+                    <a href="<?= $row['training_img'] ?>">
+                        <img src="<?= $row['training_img'] ?>" alt="<?= $row['	training_description'] ?>">
                     </a>
                 </li>
-                <li class="gallery-block__item">
-                    <a href="img/gallery-2.jpg">
-                        <img src="img/gallery-2.jpg" alt="фото">
-                    </a>
-                </li>
-                <li class="gallery-block__item">
-                    <a href="img/gallery-3.jpg">
-                        <img src="img/gallery-3.jpg" alt="фото">
-                    </a>
-                </li>
-                <li class="gallery-block__item">
-                    <a href="img/gallery-4.jpg">
-                        <img src="img/gallery-4.jpg" alt="фото">
-                    </a>
-                </li>
-                <li class="gallery-block__item">
-                    <a href="img/gallery-4.jpg">
-                        <img src="img/gallery-5.jpg" alt="фото">
-                    </a>
-                </li>
+            <?php
+                }
+            ?>
             </ul>
         </div>
     </section>
