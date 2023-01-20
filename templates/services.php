@@ -8,79 +8,64 @@ Template Name: Услуги
     <div class="container">
         <section class="services">
             <h1>Услуги</h1>
-            <h2>Тренинги:</h2>
-            <p>Тренинги рассчитаны на 2 дня, время проведения с 10.00 до 18.00, количество участников 10 -15
-                человек.<br>
-                В программе тренингов телесно-ориентированные упражнения, игры, танцы с высвобождением
-                заблокированных сил, обсуждение результатов, осознание перспектив.<br>
-                Дата тренингов определяется по мере формирования групп.</p>
+            <h2><?= CFS()->get('services_title') ?></h2>
+            <p><?= CFS()->get('services_text') ?></p>
             <ul class="services__list">
+            <?php
+                $my_posts = get_posts( array(
+                    'numberposts' => -1,
+                        'category' => 4,
+                        'orderby' => 'title',
+                        'order' => 'ASC',
+                        'post_type'   => 'post',
+                        'suppress_filters' => true,
+                    ) );
+
+                foreach( $my_posts as $post ){
+                    setup_postdata( $post );
+                ?>
                 <li class="services__item">
-                    <a href="#">
+                    <a href="<?php the_permalink(); ?>">
                         <div class="services__item-img">
-                            <img src="img/redparus.jpg" alt="фото">
+                            <?php the_post_thumbnail( '' );  ?>
                         </div>
-                        <p>Деньги</p>
+                        <p><?php the_title(); ?></p>
                     </a>
                 </li>
-                <li class="services__item">
-                    <a href="#">
-                        <div class="services__item-img">
-                            <img src="img/redparus.jpg" alt="фото">
-                        </div>
-                        <p>Время и пространство</p>
-                    </a>
-                </li>
-                <li class="services__item">
-                    <a href="#">
-                        <div class="services__item-img">
-                            <img src="img/redparus.jpg" alt="фото">
-                        </div>
-                        <p> Эмоциональная свобода</p>
-                    </a>
-                </li>
-                <li class="services__item">
-                    <a href="#">
-                        <div class="services__item-img">
-                            <img src="img/redparus.jpg" alt="фото">
-                        </div>
-                        <p>Танец моей жизни</p>
-                    </a>
-                </li>
-                <li class="services__item">
-                    <a href="#">
-                        <div class="services__item-img">
-                            <img src="img/redparus.jpg" alt="фото">
-                        </div>
-                        <p>Деньги</p>
-                    </a>
-                </li>
+            <?php
+                }
+                wp_reset_postdata();
+            ?>
             </ul>
 
             <ul class="services__list-lessons">
-                <li class="item-lessons">
-                    <div class="item-lessons__img">
-                        <img src="img/gallery-5.jpg" alt="">
-                    </div>
-                    <div class="item-lessons__text">
-                        <h3>Семинарские занятия в группах личностного роста:</h3>
-                        <p>Курс рассчитан на длительное время. Занятия проходят 1 раз в неделю в течение 2 – 3
-                            лет в сформированных группах по 5-6 человек.</p>
-                        <a href="single-services.html" class="link">читать далее >></a>
-                    </div>
-                </li>
-                <li class="item-lessons">
-                    <div class="item-lessons__img">
-                        <img src="img/1.jpg" alt="">
-                    </div>
-                    <div class="item-lessons__text">
-                        <h3>Индивидуальное консультирование:</h3>
-                        <p>Занимает по времени 2 – 2,5 часа. Количество встреч от глубины и серьезности
-                            проблемы, от понимания самого человека необходимости внутренней работы.</p>
-                        <a href="#" class="link">читать далее >></a>
-                    </div>
-                </li>
+            <?php
+                $my_posts = get_posts( array(
+                    'numberposts' => -1,
+                        'category' => 3,
+                        'orderby' => 'title',
+                        'order' => 'ASC',
+                        'post_type'   => 'post',
+                        'suppress_filters' => true,
+                    ) );
 
+                foreach( $my_posts as $post ){
+                    setup_postdata( $post );
+                ?>
+                <li class="item-lessons">
+                    <div class="item-lessons__img">
+                        <?php the_post_thumbnail( '' );  ?>
+                    </div>
+                    <div class="item-lessons__text">
+                        <h3><?php the_title(); ?></h3>
+                        <p><?= CFS()->get('service_desc') ?></p>
+                        <a href="<?php the_permalink(); ?>" class="link">читать далее >></a>
+                    </div>
+                </li>
+            <?php
+                }
+                wp_reset_postdata();
+            ?>
             </ul>
         </section>
     </div>
