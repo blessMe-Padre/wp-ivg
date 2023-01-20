@@ -44,7 +44,7 @@ Template Name: Контакты
                     </div>
                     <p>Место проведения тренингов согласовывается после определения даты тренинга.</p>
                     <figure>
-                        <img src="img/winwow_view.jpg" alt="Elephant at sunset">
+                        <img src="<?= CFS()->get('contact_view') ?>" alt="<?= CFS()->get('contact_view_text') ?>">
                         <figcaption>Вид из окна</figcaption>
                     </figure>
                 </section>
