@@ -735,6 +735,23 @@ img {
 }
 /* Страница "Статьи" end */
 
+/* Страница одной статьи start */
+.article {
+    padding: 60px 0;
+}
+
+.article p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.article img {
+    display: block;
+    max-width: 600px;
+    margin: 30px auto;
+}
+/* Страница одной статьи end */
+
 /* Страница "Тренинги" start */
 .descriptions {
     padding: 60px 0;
