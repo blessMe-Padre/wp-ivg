@@ -20,7 +20,7 @@
                         </li>
                     </ul>
                     <div class="footer__text">
-                        <p>©2023 - Копирование материалов сайта без разрешения запрещено</p>
+                        <p>©<?= date('Y');?> - Копирование материалов сайта без разрешения запрещено</p>
                         <p> <a href="http://freelancervl.ru" target="_blank" rel="noopener noreferrer">Разработка и
                                 поддержка</a></p>
                     </div>

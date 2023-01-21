@@ -36,42 +36,32 @@ Template Name: Тренинги
                 <div class="swiper-button-next"></div>
                 <div class="training__wrapper swiper">
                     <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <a href="#">
-                                <img src="img/about-300x200.jpg" alt="фото">
-                                <h3>Танец моей жизни</h3>
-                                <time>12.12.2020</time>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, id! Lorem
-                                    ipsum
-                                    dolor, sit amet consectetur adipisicing elit. Quia itaque labore alias
-                                    assumenda
-                                    omnis iusto dolores illum delectus esse similique!</p>
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#">
-                                <img src="img/1.jpg" alt="">
-                                <h3>Танец моей жизни</h3>
-                                <time>12.12.2020</time>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, id! Lorem
-                                    ipsum
-                                    dolor, sit amet consectetur adipisicing elit. Quia itaque labore alias
-                                    assumenda
-                                    omnis iusto dolores illum delectus esse similique!</p>
-                            </a>
-                        </li>
-                        <li class="swiper-slide">
-                            <a href="#">
-                                <img src="img/2.jpg" alt="">
-                                <h3>Танец моей жизни</h3>
-                                <time>12.12.2020</time>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, id! Lorem
-                                    ipsum
-                                    dolor, sit amet consectetur adipisicing elit. Quia itaque labore alias
-                                    assumenda
-                                    omnis iusto dolores illum delectus esse similique!</p>
-                            </a>
-                        </li>
+                    <?php
+                            $my_posts = get_posts( array(
+                            'numberposts' => -1,
+                                'category' => 4,
+                                'orderby' => 'title',
+                                'order' => 'ASC',
+                                'post_type'   => 'post',
+                                'suppress_filters' => true,
+                            ) );
+
+                            foreach( $my_posts as $post ){
+                                setup_postdata( $post );
+                            ?>
+
+                            <li class="swiper-slide">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail( '' );  ?>
+                                    <h3><?php the_title(); ?></h3>
+                                    <time datetime="<?= CFS()->get('training_when_robots') ?>"><?= CFS()->get('training_when') ?></time>
+                                    <p><?= CFS()->get('training__descriptions') ?></p>
+                                </a>
+                            </li>
+                            <?php
+                                }
+                            wp_reset_postdata();
+                        ?>
                     </ul>
                 </div>
         </div>

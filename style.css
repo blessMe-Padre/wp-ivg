@@ -521,6 +521,10 @@ img {
 }
 
 .main-articles__img img {
+    display: block;
+}
+
+.main-articles__img img {
     transition: transform 0.3s ease;
 }
 

@@ -11,25 +11,22 @@ Template Name: Контакты
                     <h1>Контакты</h1>
                     <ul>
                         <li>
-                            <a class="link" href="mailto:IVG7177@gmail.com"><i
-                                    class="icon-mail"></i><span>IVG7177@gmail.com</span></a>
+                            <a class="link" href="mailto:<?= CFS()->get('contact_email') ?>"><i
+                                    class="icon-mail"></i><span><?= CFS()->get('contact_email') ?></span></a>
                         </li>
                         <li>
-                            <a class="link" href="tel:+79841958973"><i class="icon-phone"></i><span>Телефон: +7 908
-                                    448-71-77</span></a>
+                            <a class="link" href="tel:+<?= CFS()->get('contact_phone_robots') ?>"><i class="icon-phone"></i><span>Телефон: <?= CFS()->get('contact_phone') ?></span></a>
                         </li>
                         <li>
-                            <a class="link" href="tel:+2587177"><i class="icon-phone"></i><span>Телефон:
-                                    258-71-77</span></a>
+                            <a class="link" href="tel:<?= CFS()->get('contact_phone_short_robots') ?>"><i class="icon-phone"></i><span>Телефон (короткий): <?= CFS()->get('contact_phone_short') ?></span></a>
                         </li>
                         <li>
-                            <a class="link" href="tel:+ +7 984 195-89-73"><i class="icon-whatsapp"></i><span>WhatsApp:
-                                    +7 984
-                                    195-89-73</span></a>
+                            <a class="link" href="<?= CFS()->get('contact_whatsapp_link') ?>"><i class="icon-whatsapp" target="_blank"></i><span>WhatsApp:
+                            <?= CFS()->get('contact_whatsapp') ?></span></a>
                         </li>
                         <li>
-                            <a class="link" href="#"><i class="icon-instagram"></i><span>Instagram:
-                                    @igorlacheva</span></a>
+                            <a class="link" href="<?= CFS()->get('contact_instagram_link') ?>"><i class="icon-instagram" target="_blank"></i><span>Instagram:
+                            <?= CFS()->get('contact_instagram') ?></span></a>
                         </li>
                         <li>
                             <a class="link" href="#"><i class="icon-skype"></i><span>Skype: gorlachovairina</span></a>
