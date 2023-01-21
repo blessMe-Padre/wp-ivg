@@ -57,7 +57,7 @@ Template Name: Статьи
                                     setup_postdata( $post );
                                 ?>
                                 <li class="main-articles-item-search">
-                                    <a class="link article" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <a class="link article-single" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </li>
                             <?php
                                 }

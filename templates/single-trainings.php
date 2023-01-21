@@ -74,6 +74,7 @@ Template Post Type: post
             </div>
             <div class="swiper-pagination"></div>
         </section>
+        <?php comments_template(); ?>
     </div>
 </main>
 <?php get_footer(); ?>

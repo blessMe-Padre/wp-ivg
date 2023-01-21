@@ -748,7 +748,9 @@ img {
 .article img {
     display: block;
     max-width: 600px;
+    max-height: 600px;
     margin: 30px auto;
+    object-fit: contain;
 }
 /* Страница одной статьи end */
 

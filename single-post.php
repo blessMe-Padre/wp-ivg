@@ -13,5 +13,8 @@ Template Name: Статьи
             <?php the_content(); ?>
         </div>
     </section>
+    <div class="container">
+        <?php comments_template(); ?>
+    </div>
 </main>
 <?php get_footer(); ?>
