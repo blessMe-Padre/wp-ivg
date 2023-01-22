@@ -23,7 +23,7 @@
             <div class="header__inner">
                 <div class="container">
                     <div class="header__row">
-                        <h1 class="header__title">ИРИНА ГОРЛАЧЕВА</h1>
+                        <h1 class="header__title">Ирина Горлачёва</h1>
                         <div class="logo">
                             <p class="logo__text">Практический психолог во&nbsp;Владивостоке</p>
                             <div class="logo__img">

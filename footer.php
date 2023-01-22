@@ -21,8 +21,11 @@
                     </ul>
                     <div class="footer__text">
                         <p>©<?= date('Y');?> - Копирование материалов сайта без разрешения запрещено</p>
-                        <p> <a href="http://freelancervl.ru" target="_blank" rel="noopener noreferrer">Разработка и
-                                поддержка</a></p>
+                        <p>
+                        <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                        <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+                        <a href="http://freelancervl.ru" target="_blank" rel="noopener noreferrer">Разработка и поддержка</a>
+                        </p>
                     </div>
                 </div>
             </div>
