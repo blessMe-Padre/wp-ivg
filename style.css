@@ -778,11 +778,6 @@ img {
     margin: 0 auto;
 }
 
-.descriptions p {
-    font-size: 18px;
-    line-height: 26px;
-}
-
 @media (max-width: 767px) {
     .descriptions {
         padding: 60px 0 30px;
@@ -1009,7 +1004,6 @@ img {
 }
 
 .why__item p {
-   font-size: 20px;
    margin: 30px 0 0;
    text-align: center;
 }
