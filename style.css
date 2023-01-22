@@ -8,7 +8,7 @@ Version: 1.0
 :root {
     --color-white: #ffffff;
     --color-gray: #f1f1f1;
-    --color-green: #8DA94E;
+    --color-green: rgb(112, 175, 96);
     --text-dark: #1d2131;
     --color-blue: #161F89;
     --color-light-blue: #6BA2FB;
