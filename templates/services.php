@@ -57,8 +57,10 @@ Template Name: Услуги
                         <?php the_post_thumbnail( '' );  ?>
                     </div>
                     <div class="item-lessons__text">
-                        <h3><?php the_title(); ?></h3>
-                        <p><?= CFS()->get('service_desc') ?></p>
+                        <div class="item-lessons__wrapper">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?= CFS()->get('service_desc') ?></p>
+                        </div>
                         <a href="<?php the_permalink(); ?>" class="link">читать далее >></a>
                     </div>
                 </li>

@@ -37,47 +37,6 @@
             </div>
             <div class="container">
                 <button class="btn nav-button" aria-label="Меню"></button>
-                <!-- <nav class="nav">
-                    <ul>
-                        <li>
-                            <a href="index.html">Главная</a>
-                        </li>
-                        <li>
-                            <a href="services.html">услуги</a>
-                            <ul>
-                                <li>
-                                    <a href="single-services.html">Семинарские занятия</a>
-                                </li>
-                                <li>
-                                    <a href="#">Сеансы Релаксации</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">тренинги</a>
-                            <ul>
-                                <li>
-                                    <a href="single-trainings.html">Тренинг «Деньги»</a>
-                                </li>
-                                <li>
-                                    <a href="#">Сеансы Релаксации</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="articles.html">статьи</a>
-                        </li>
-                        <li>
-                            <a href="about.html">о себе</a>
-                        </li>
-                        <li>
-                            <a href="feedback.html">обратная связь</a>
-                        </li>
-                        <li>
-                            <a href="contacts.html">контакты</a>
-                        </li>
-                    </ul>
-                </nav> -->
                 <nav class="nav">
                 <?php wp_nav_menu([
 					'theme_location' => 'top',

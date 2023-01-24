@@ -43,8 +43,10 @@ Template Name: Главная страница
                                 <a href="<?php the_permalink(); ?>">
                                     <?php the_post_thumbnail( '' );  ?>
                                     <h3><?php the_title(); ?></h3>
-                                    <time datetime="<?= CFS()->get('training_when_robots') ?>"><?= CFS()->get('training_when') ?></time>
-                                    <p><?= CFS()->get('training__descriptions') ?></p>
+                                    <p class="training__when">
+                                        Ближайший тренинг: <time datetime="<?= CFS()->get('training_when_robots') ?>"><?= CFS()->get('training_when') ?></time>
+                                    </p>
+                                    <p class="training__description"><?= CFS()->get('training__descriptions') ?></p>
                                 </a>
                             </li>
                             <?php
@@ -63,7 +65,7 @@ Template Name: Главная страница
                         <?php
                         $my_posts = get_posts( array(
                             'numberposts' => -1,
-                                'category' => 5,
+                                'category' => 6,
                                 'orderby' => 'title',
                                 'order' => 'ASC',
                                 'post_type'   => 'post',
@@ -90,7 +92,10 @@ Template Name: Главная страница
                     ?>
                         </ul>
                         <div id="articles">
-                            <input class="search input input--search" type="text" placeholder="Поиск">
+                            <div class="input-wrapper">
+                                <input class="search input input--search" type="text" placeholder="Поиск">
+                                <i class="icon-search"></i>
+                            </div>
                             <h4>Статьи на сайте</h4>
                             <ul class="main-articles-list-search list">
                             <?php

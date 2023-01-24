@@ -1,7 +1,4 @@
 <?php
-/*
-Template Name: Статьи
-*/
 	get_header();
 ?>
 <main>
@@ -11,20 +8,18 @@ Template Name: Статьи
             <div class="articles__wrapper">
                 <ul class="articles__list">
                 <?php
-                        $my_posts = get_posts( array(
-                            'numberposts' => -1,
-                                'category' => 5,
-                                'orderby' => 'title',
-                                'order' => 'ASC',
-                                'post_type'   => 'post',
-                                'suppress_filters' => true,
-                            ) );
-
-                        foreach( $my_posts as $post ){
-                            setup_postdata( $post );
-                        ?>
-
-                        <li class="articles__item">
+			if(have_posts()) {
+				while (have_posts()) {
+					the_post();
+					$all_category = get_the_category();
+					$res_name = '';
+					foreach ($all_category as $category ) {
+						if($category->term_id == 5 || $category->term_id == 6) {
+							$res_name = $category->slug;
+						}
+					}
+					?>
+                    <li class="articles__item">
                         <div class="articles__img">
                             <?php the_post_thumbnail( '' );  ?>
                         </div>
@@ -34,13 +29,17 @@ Template Name: Статьи
                             <a href="<?php the_permalink(); ?>" class="link">читать далее >></a>
                         </div>
                     </li>
-                    <?php
-                        }
-                        wp_reset_postdata();
-                    ?>
+					<?php
+				}
+			}
+			?>
+            <?php the_posts_pagination(); ?>
                 </ul>
                 <div id="articles">
-                    <input class="search input input--search" type="text" class="search" placeholder="Поиск">
+                <div class="input-wrapper">
+                    <input class="search input input--search" type="text" placeholder="Поиск">
+                    <i class="icon-search"></i>
+                </div>
                     <h4>Статьи на сайте</h4>
                     <ul class="main-articles-list-search list">
                     <?php
@@ -66,7 +65,9 @@ Template Name: Статьи
                     </ul>
                 </div>
             </div>
+
         </div>
     </section>
+
 </main>
 <?php get_footer(); ?>
