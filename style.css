@@ -425,6 +425,12 @@ img {
         padding: 60px 0 30px;
     }
 }
+
+@media (max-width: 550px) {
+    .about__img {
+        float: none;
+    }
+}
 /* конец секции "Обо мне" */
 
 /* секция "Тренинги" */
@@ -618,6 +624,11 @@ img {
 
 .input-wrapper {
     position: relative;
+    margin-bottom: 20px;
+}
+
+.input--search {
+    width: 100%;
 }
 
 .icon-search {
@@ -629,16 +640,6 @@ img {
     transform: translate(-20%, -50%);
 }
 
-.input--search {
-    display: flex;
-    min-width: 150px;
-    width: 100%;
-    background-image: url("../img/icon-search.png");
-    background-repeat: no-repeat;
-    background-position: center right 10px;
-    padding-right: 40px;
-    margin-bottom: 20px;
-}
 /* Поиск на главной end*/
 
 /* Страница contacts start*/

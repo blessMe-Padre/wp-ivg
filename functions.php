@@ -37,20 +37,23 @@ add_theme_support( 'post-thumbnails', array('post'));
     //---------------------------------------------------------------------------------------------------------------------------------------------
 
     // подключаем js файл baguetteBox
-    wp_enqueue_script( 'baguetteBox', get_template_directory_uri() .
-    '/assets/js/baguetteBox.min.js', false, null, 'footer' );
+      wp_enqueue_script( 'baguetteBox', get_template_directory_uri() .
+        '/assets/js/baguetteBox.min.js', false, null, 'footer' );
 
-     // подключаем js файл list.min.js
-    wp_enqueue_script( 'list', get_template_directory_uri() .
-    '/assets/js/list.min.js', false, null, 'footer' );
+    if(is_page_template('templates/index.php') || is_category('articles')) {
+        // подключаем js файл list.min.js
+       wp_enqueue_script( 'list', get_template_directory_uri() .
+       '/assets/js/list.min.js', false, null, 'footer' );
+    }
+
 
     // подключаем js файл masonry.pkgd.min.js
-    wp_enqueue_script( 'masonry', get_template_directory_uri() .
-    '/assets/js/masonry.pkgd.min.js', false, null, 'footer' );
+        wp_enqueue_script( 'masonry', get_template_directory_uri() .
+        '/assets/js/masonry.pkgd.min.js', false, null, 'footer' );
 
     // подключаем js файл swiper-bundle.min.js
-    wp_enqueue_script( 'swiper', get_template_directory_uri() .
-    '/assets/js/swiper-bundle.min.js', false, null, 'footer' );
+        wp_enqueue_script( 'swiper', get_template_directory_uri() .
+        '/assets/js/swiper-bundle.min.js', false, null, 'footer' );
 
     // подключаем основной script.js файл
     wp_enqueue_script( '', get_template_directory_uri() .
