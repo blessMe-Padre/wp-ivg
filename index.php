@@ -119,6 +119,21 @@ Template Name: Главная страница
                                 wp_reset_postdata();
                             ?>
                             </ul>
+                             <div>
+                                <?php
+                                $args = array(
+                                    'orderby' => 'name',
+                                    'style' => 'none',
+                                    'title_li' => '',
+                                    'exclude' => '1,4,3',
+                                    'hide_empty' => 0,
+                                    'depth' => 0,
+                                    'echo' => 1,
+                                );
+
+                                wp_list_categories($args);
+                                ?>
+                             </div>
                         </div>
                     </div>
                 </div>
