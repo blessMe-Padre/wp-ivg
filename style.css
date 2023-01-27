@@ -890,6 +890,12 @@ img {
     margin-bottom: 30px;
 }
 
+.item-lessons-category {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .item-lessons__text {
     padding: 10px 15px 30px;
     display: flex;
@@ -1195,6 +1201,10 @@ input.submit-btn:hover {
 /* виджет tags start */
 
 .tags {
+    margin-top: 40px;
+}
+
+.tags__wrapper {
     display: flex;
     flex-wrap: wrap;
 }

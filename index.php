@@ -119,7 +119,9 @@ Template Name: Главная страница
                                 wp_reset_postdata();
                             ?>
                             </ul>
-                             <div class="tags">
+                            <div class="tags">
+                                <h4>Рубрики</h4>
+                                <div class="tags__wrapper">
                                 <?php
                                 $args = array(
                                     'orderby' => 'name',
@@ -134,6 +136,7 @@ Template Name: Главная страница
 
                                 wp_list_categories($args);
                                 ?>
+                                </div>
                              </div>
                         </div>
                     </div>
