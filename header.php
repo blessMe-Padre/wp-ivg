@@ -9,7 +9,11 @@
     <?php
 			if(is_404()) {
 				echo 'Ошибка 404';
-			} else {
+			}
+            if(is_category()) {
+                single_cat_title('Рубрика: ');
+            }
+            else {
 				the_title();
 			}
 		?>

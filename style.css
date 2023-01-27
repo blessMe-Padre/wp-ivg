@@ -1192,6 +1192,33 @@ input.submit-btn:hover {
 
 /* Пагинация стили end */
 
+/* виджет tags start */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags a {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--color-white);
+    padding: 2px 10px;
+    margin: 0 10px 15px 0;
+    background-color: var(--color-light-blue);
+    border: 1px solid var(--color-light-blue);
+    border-radius: 3px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.tags a:hover {
+    color: var(--text-dark);
+    background-color: var(--color-white);
+}
+
+/* виджет tags end */
+
 /* footer start  */
 .footer {
     padding: 20px 0;
