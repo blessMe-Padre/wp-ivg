@@ -87,6 +87,56 @@ Template Name: Главная страница
                     </div>
                 </div>
             </section>
+
+            <section class="online">
+                <div class="container">
+                    <h2>Онлайн курс</h2>
+                    <ul class="online__list">
+                        <li class="online__item">
+                            <div class="online__item-wrapper">
+                                <h3>Отношения</h3>
+                                <p>Почему нам так сложно наладить отношения со своими близкими?</p>
+                            </div>
+                            <div class="online__img">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/1.jpg" >
+                            </div>
+                        </li>
+                        <li class="online__item">
+                            <div class="online__item-wrapper">
+                                <h3>Поступки</h3>
+                                <p>Почему порой мы не понимаем себя и свои поступки?</p>
+                            </div>
+                            <div class="online__img">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/2.jpg" >
+                            </div>
+                        </li>
+                        <li class="online__item">
+                            <div class="online__item-wrapper">
+                                <h3>Жизнь</h3>
+                                <p>Почему мы боимся воплотить в жизнь наши мечты?</p>
+                            </div>
+                            <div class="online__img">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/3.jpg" >
+                            </div>
+                        </li>
+                        <li class="online__item">
+                            <div class="online__item-wrapper">
+                                <h3>Выбор</h3>
+                                <p>Почему так невыносимо сделать выбор между тем, что хочется, и тем — что нужно?</p>
+                            </div>
+                            <div class="online__img">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/4.jpg" >
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="load-more">
+                        <a class="load-more__btn load-more__btn-one" href="course">
+                            <span>подробнее</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             <section class="main-articles">
                 <div class="container">
                     <h2>Статьи</h2>
