@@ -6,16 +6,46 @@ Template Name: Главная страница
 ?>
         <main>
             <section class="about">
-                <div class="container">
-                    <h1 class="title"><?= CFS()->get('main_title') ?></h1>
-                    <div class="about__wrapper">
-                        <div class="about__img">
-                            <img src="<?= CFS()->get('main_photo') ?>" alt="фото">
+                <h1 class="title visually-hidden"><?= CFS()->get('main_title') ?></h1>
+                <div class="about-swiper-button-prev"></div>
+                <div class="about-swiper-button-next"></div>
+                <div class="about__wrapper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide about__item">
+                            <div class="about__item-img">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/about.png" >
+                            </div>
+                            <div class="about__item-descriptions">
+                                <h2>Обо мне</h2>
+                                <p class="about__item-text">
+                                Многие люди привыкли думать, что роль психолога состоит исключительно в том, чтобы помогать людям преодолевать жизненные трудности. Однако это не так – на мой взгляд, роль психолога состоит в том, чтобы дать практические советы и научить человека быть счастливее. Тогда жизненных трудностей станет намного меньше, ведь испытания уже не будут казаться такими сложными.
+                                </p>
+                                <p> То, что Вы попали на эту страницу, скорее всего, значит, что Вы находитесь в духовных поисках, а значит – Истина остается в приоритете!</p>
+
+                                <p>Приглашаю Вас подробно ознакомиться с разделами сайта, посвященными тренингам и индивидуальным консультациям.
+                                </p>
+                            </div>
                         </div>
-                        <?php the_content(); ?>
+                        <div class="swiper-slide about__item">
+                            <div class="about__item-img">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/img/about.png" >
+                            </div>
+                            <div class="about__item-descriptions">
+                                <h2>Услуги</h2>
+                                <p class="about__item-text">
+                                Для реализации этих задач я предлагаю индивидуальные консультации и провожу тренинги, в ходе которых люди находят для себя ответы на многие интересующие их в течение многих лет вопросы. Как психолог, я работаю над тем, чтобы придать людям тягу к саморазвитию, ведь именно от постоянной и системной работы над собой зависит благосостояние, успешность и уровень счастья.
+                                Ваше благополучие зависит именно от Вашего желания меняться, и я, как психолог, готова помогать Вам в этом, давать практические советы и обсуждать Ваши шаги на пути саморазвития.</p>
+                                <div class="load-more load-more--main">
+                                    <a class="load-more__btn load-more__btn-one" href="services">
+                                        <span>подробнее</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+
             <section class="training">
                 <div class="container">
                     <h2>Тренинги</h2>

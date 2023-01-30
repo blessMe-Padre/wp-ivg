@@ -13,6 +13,7 @@ Version: 1.0
     --color-blue: #161F89;
     --color-light-blue: #6BA2FB;
     --color-bg: #f7f7f7;
+    --color-bg-blue: #D4D8F5;
   }
 
 body {
@@ -397,7 +398,9 @@ img {
 
 /* секция Обо мне */
 .about {
-    padding: 60px 0 30px;
+    padding: 60px 20px 0;
+    background-color: var(--color-bg-blue);
+    position: relative;
 }
 
 .about p {
@@ -405,13 +408,9 @@ img {
     line-height: 26px;
 }
 
-.about__img {
-    max-width: 300px;
-    height: 200px;
-    padding: 5px;
-    background: #f1f1f1;
-    margin: 0 30px 10px 0;
-    float: left;
+.about__wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .about__wrapper img {
@@ -420,17 +419,77 @@ img {
     object-fit: cover;
 }
 
-@media (max-width: 767px) {
-    .about {
-        padding: 60px 0 30px;
+.about__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.about-swiper-button-prev,
+.about-swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-swiper-button-next {
+    right: 20px;
+}
+
+.about-swiper-button-prev::after,
+.about-swiper-button-next::after {
+    content: "prev";
+    position: absolute;
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none!important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    color: var(--color-white);
+}
+
+.about-swiper-button-next::after {
+    content: "next";
+}
+
+@media (max-width: 1023px) {
+    .about__item {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }
 
-@media (max-width: 550px) {
-    .about__img {
-        float: none;
+@media (max-width: 767px) {
+    .about {
+        padding: 60px 20px 0;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about-swiper-button-prev,
+    .about-swiper-button-next {
+        top: 30%;
     }
 }
+
+@media (max-width: 450px) {
+    .about-swiper-button-prev,
+    .about-swiper-button-next {
+        top: 20%;
+    }
+}
+
 /* конец секции "Обо мне" */
 
 /* секция "Тренинги" */
@@ -935,6 +994,12 @@ img {
     position: relative;
     padding-bottom: 60px;
     text-align: center;
+}
+
+.load-more--main {
+    padding-bottom: 0;
+    text-align: left;
+    margin-top: 30px;
 }
 
 .load-more__btn {

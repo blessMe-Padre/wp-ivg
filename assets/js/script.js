@@ -12,6 +12,19 @@ window.addEventListener('DOMContentLoaded', () => {
         body.classList.toggle("body-lock");
     });
 
+    const swiperAbout = new Swiper('.about__wrapper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+
+        navigation: {
+            nextEl: '.about-swiper-button-prev',
+            prevEl: '.about-swiper-button-next',
+        },
+    });
+
     const swiper = new Swiper('.training__wrapper', {
         slidesPerView: 3,
         loop: true,
