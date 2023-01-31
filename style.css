@@ -13,7 +13,7 @@ Version: 1.0
     --color-blue: #161F89;
     --color-light-blue: #6BA2FB;
     --color-bg: #f7f7f7;
-    --color-bg-blue: #D4D8F5;
+    --color-bg-blue: #e6e9fb;
   }
 
 body {
@@ -267,7 +267,7 @@ img {
     list-style: none;
     opacity: 0;
     visibility: hidden;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--color-bg);
     transition: opacity 0.3s ease;
     border-right: 2px solid var(--color-blue);
@@ -336,7 +336,7 @@ img {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 2;
+        z-index: 4;
         padding: 10px 0 0;
     }
 
@@ -373,7 +373,7 @@ img {
         background-color: var(--color-gray);
         padding: 110px 0 40px 15px;
         overflow: auto;
-        z-index: 1;
+        z-index: 3;
         transition: transform 0.3s ease;
     }
 
@@ -433,7 +433,7 @@ img {
     width: calc(var(--swiper-navigation-size)/ 44 * 27);
     height: var(--swiper-navigation-size);
     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-    z-index: 10;
+    z-index: 2;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -509,7 +509,7 @@ img {
 .online__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-start: auto;
+    grid-template-rows: minmax(280px, 320px);
 }
 
 .online__item:nth-child(3) .online__img {
@@ -544,14 +544,57 @@ img {
 }
 
 .online__img {
-    width: 310px;
-    height: 280px;
+    overflow: hidden;
 }
 
 .online__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.online__img img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+@media (max-width: 1279px) {
+    .online__list {
+        grid-template-columns: 1fr;
+    }
+
+    .online__item {
+        grid-template-rows: 1fr;
+    }
+
+    .online__item:nth-child(2) .online__img {
+        grid-column: 1/2;
+        grid-row: 1 /2;
+    }
+
+    .online__item:nth-child(2) .online__item-wrapper {
+        grid-column: 2/3;
+    }
+
+    .online__item:nth-child(3) .online__img {
+        grid-column: 2/3;
+        grid-row: 1 /2;
+    }
+
+    .online__item:nth-child(3) .online__item-wrapper {
+        grid-column: 1/2;
+    }
+}
+
+@media (max-width: 550px) {
+    .online__item {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    .online__list {
+        margin-bottom: 30px;
+    }
 }
 /* секция Онлайн курс end */
 
