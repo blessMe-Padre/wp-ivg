@@ -54,7 +54,7 @@ main {
 
 p {
     font-size: 18px;
-    line-height: 24px;
+    line-height: 26px;
 }
 
 .link {
@@ -1444,6 +1444,16 @@ input.submit-btn:hover {
 }
 
 /* виджет tags end */
+
+/* tabs start */
+._tabs-block {
+    display: none;
+}
+
+._tabs-block._active{
+    display: block;
+}
+/* tabs end */
 
 /* footer start  */
 .footer {
