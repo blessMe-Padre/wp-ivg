@@ -8,7 +8,7 @@ Template Post Type: post
 <main>
     <section class="descriptions">
         <div class="container">
-        <h1><?php the_title(); ?></h1>
+            <h1><?php the_title(); ?></h1>
             <?php the_post_thumbnail( '' );  ?>
             <?php the_content(); ?>
         </div>
@@ -45,16 +45,14 @@ Template Post Type: post
                 <?= do_shortcode( CFS()->get('form_shortcode')); ?>
                 <p>* Ваши личные данные будут надежно защищены</p>
             </div>
-
         </div>
-
     </div>
     <div class="container">
         <section class="training-reviews">
             <h2>Что говорят о тренинге участники?</h2>
             <div class="training-reviews__slider swiper">
                 <ul class="training-reviews__wrapper swiper-wrapper">
-                <?php $loop = CFS()->get('reviews');
+                    <?php $loop = CFS()->get('reviews');
                 foreach ($loop as $row ) {
                 ?>
                     <li class="training-reviews__item swiper-slide">
@@ -64,10 +62,11 @@ Template Post Type: post
                         <div class="training-reviews__item-wrapper">
                             <p class="training-reviews__item-name"><?= $row['reviews_name'] ?></p>
                             <p class="training-reviews__item-text">
-                                <q><em><?= $row['reviews_text'] ?></em></q></p>
+                                <q><em><?= $row['reviews_text'] ?></em></q>
+                            </p>
                         </div>
                     </li>
-                <?php
+                    <?php
                     }
                 ?>
                 </ul>
@@ -76,7 +75,7 @@ Template Post Type: post
         </section>
     </div>
     <div class="container">
-      <?php comments_template(); ?>
+        <?php comments_template(); ?>
     </div>
 
 </main>

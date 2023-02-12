@@ -121,8 +121,26 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     //Tabs
-    let tabs = document.querySelectorAll("._tabs");
+    const tabs = document.querySelectorAll("._tabs");
+    const accordions = document.querySelectorAll("._tabs-accordion");
 
+    accordions.forEach(el => {
+        el.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            const target = evt.currentTarget;
+            const button = target.querySelector('._tabs-button');
+            const content = target.querySelector('._tabs-content');
+
+            button.classList.toggle('_active');
+            content.classList.toggle('_active');
+
+            if (button.classList.contains('_active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                content.style.maxHeight = null;
+            }
+        });
+    });
 
     for (let index = 0; index < tabs.length; index++) {
         let tab = tabs[index];
@@ -135,12 +153,15 @@ window.addEventListener('DOMContentLoaded', () => {
                     let tabs_item = tabs_items[index];
                     tabs_item.classList.remove('_active');
                     tabs_blocks[index].classList.remove('_active');
+                    tabs_blocks[index].style.maxHeight = null;
                 }
                 tabs_item.classList.add('_active');
                 tabs_blocks[index].classList.add('_active');
+                tabs_blocks[index].style.maxHeight = tabs_blocks.scrollHeight + 'px';
                 e.preventDefault();
             });
         }
     }
+
 
 });

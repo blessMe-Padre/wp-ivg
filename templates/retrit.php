@@ -62,6 +62,44 @@ Template Name: Ретрит
                     </ul>
                 </div>
             </div>
+
+            <div class="program__wrapper program__wrapper--mobile _tabs">
+                <div class="program__nav">
+                    <div class="_tabs-accordion">
+                        <button class="program__btn _tabs-button _active">День 1</button>
+                        <div class="_tabs-content _active" style="max-height: 70px;">
+                            <ul>
+                                <li>1:30 — Прибытие утренним рейсом, трансфер в отель</li>
+                                <li>3:00 — Обед, знакомство, расселение</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="_tabs-accordion">
+                        <button class="program__btn _tabs-button">День 2</button>
+                        <div class="_tabs-content">
+                            <ul>
+                                <li>8:00 — Утренняя медитация</li>
+                                <li>9:00 — Завершение 4-х дневной программы. Выезд из отеля</li>
+                                <li>9:00 — Завершение 4-х дневной программы. Выезд из отеля</li>
+                                <li>Утренняя сессия: йога-техники снятия усталости и восстановления сил</li>
+                                <li>9:00 — Завершение 4-х дневной программы. Выезд из отеля</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="_tabs-accordion">
+                        <button class="program__btn _tabs-button">День 3</button>
+                        <div class="_tabs-content">
+                            <ul>
+                                <li>Утренняя сессия: йога-техники снятия усталости и восстановления сил</li>
+                                <li>9:00 — Завершение 4-х дневной программы. Выезд из отеля</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -92,6 +130,16 @@ Template Name: Ретрит
             </div>
             <div class="swiper-button-prev video-review-prev"></div>
             <div class="swiper-button-next video-review-next"></div>
+        </div>
+    </section>
+
+    <section class="form">
+        <h2><?= CFS()->get('form_title') ?></h2>
+        <div class="container">
+            <div class="form__wrapper">
+                <?= do_shortcode( CFS()->get('form_shortcode')); ?>
+                <p>* Ваши личные данные будут надежно защищены</p>
+            </div>
         </div>
     </section>
 </main>
