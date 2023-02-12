@@ -134,6 +134,29 @@ Template Name: Главная страница
         </div>
     </section>
 
+    <section class="retrit-main">
+        <div class="retrit-main__bg">
+            <picture>
+                <source srcset="<?php echo get_template_directory_uri() ?>/assets/img/retrit.webp" type="image/webp">
+
+                <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit.jpg" width="100%" alt="мальдивы">
+            </picture>
+        </div>
+        <div class="container">
+            <h2 class="retrit-main__title">Ретрит на Мальдивы</h2>
+            <p class="retrit-main__text">Слово ретрит — от английского retreat, означает уединенный отдых в тихом месте,
+                где можно спрятаться от
+                повседневности и посвятить время себе. Это путешествие во внутренний мир, которое в гармонии с природой
+                дарит преображение и воодушевление. В последнее время мы нуждаемся в таком отдыхе, как никогда раньше:
+                постоянный стресс отнимает все силы.</p>
+            <div class="load-more load-more--left">
+                <a class="load-more__btn load-more__btn-one" href="retrit">
+                    <span>подробнее</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="training">
         <div class="container">
             <h2>Тренинги</h2>

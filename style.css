@@ -1147,6 +1147,10 @@ img {
     text-align: center;
 }
 
+.load-more--left {
+    text-align: left;
+}
+
 .load-more--main {
     padding-bottom: 0;
     text-align: left;
@@ -1597,6 +1601,43 @@ input.submit-btn:hover {
     }
 }
 /* video-review end */
+
+/* retrit-main start */
+.retrit-main {
+    position: relative;
+    padding: 110px 0 80px;
+}
+
+.retrit-main__title {
+    color: var(--color-white);
+}
+
+.retrit-main__text {
+    color: var(--color-white);
+    text-shadow: 2px 2px 3px #000000;
+}
+
+.retrit-main__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.retrit-main__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.retrit-main__text {
+    max-width: 450px;
+    margin-bottom: 40px;
+}
+
+/* retrit-main end */
+
 
 /* footer start  */
 .footer {
