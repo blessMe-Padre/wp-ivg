@@ -79,6 +79,30 @@ window.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    const swiperVideoReviews = new Swiper('.video-review__wrapper', {
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 40,
+
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.video-review-next',
+            prevEl: '.video-review-prev',
+        },
+    });
+
     let elem = document.querySelector('.main-articles__list');
     if (elem) {
         let msnry = new Masonry(elem, {
@@ -98,6 +122,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Tabs
     let tabs = document.querySelectorAll("._tabs");
+
+
     for (let index = 0; index < tabs.length; index++) {
         let tab = tabs[index];
         let tabs_items = tab.querySelectorAll("._tabs-item");
