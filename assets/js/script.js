@@ -120,6 +120,8 @@ window.addEventListener('DOMContentLoaded', () => {
         baguetteBox.run('.single-gallery');
     }
 
+    baguetteBox.run('.single-gallery');
+
     //Tabs
     const tabs = document.querySelectorAll("._tabs");
     const accordions = document.querySelectorAll("._tabs-accordion");

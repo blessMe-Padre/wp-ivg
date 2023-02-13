@@ -30,6 +30,92 @@ Template Name: Ретрит
         </div>
     </section>
 
+    <section class="place">
+        <div class="container">
+            <h2 class="place__title">Место проведения</h2>
+            <p class="place__text">Мы будем жить на берегу моря в тихом и уединенном поселке Андреевка, недалеко от
+                Севастополя. В шаговой доступности прекрасные дикие и общественный пляжи, песчаные скалы, живописный мыс
+                Лукулл, благоухающий тенистый парк, маковые поля, дикий миндаль и виноградники.
+            <p>
+
+            <ul class="place__list single-gallery">
+                <li class="place__item">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="place__item">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-2.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-2.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="place__item">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-3.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-3.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="place__item">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-4.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-4.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="place__item">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-5.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-5.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+                <li class="place__item">
+                    <a href="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-6.jpg">
+                        <picture>
+                            <!-- <source srcset="
+                        <?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-1.webp" type="image/webp">
+                        -->
+
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/retrit-gallary-6.jpg"
+                                alt="мальдивы">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
     <section class="program _tabs">
         <div class="container">
             <h2>Программа тура</h2>
